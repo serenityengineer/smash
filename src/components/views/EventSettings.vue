@@ -24,10 +24,10 @@
           <h5 class="mt-2">Event format</h5>
           <div class="btn-group btn-group-toggle">
             <label :class="getToggleClass(format, 'local')">
-              <input type="radio" value="local" id="local" v-model="format"> Local
+              <input type="radio" value="local" id="local" v-model="format"> Broken
             </label>
             <label :class="getToggleClass(format, 'online')">
-              <input type="radio" value="online" id="online" v-model="format"> Online
+              <input type="radio" value="online" id="online" v-model="format"> Working
             </label>
           </div>
         </div>

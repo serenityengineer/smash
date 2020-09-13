@@ -17,7 +17,7 @@
     </h5>
     <div id="characters">
       <div class="character" v-for="character in characters"
-        v-bind:class="{disabled: disableCharacter(character.id), chosen: chosenCharacter(character.id)}"
+        v-bind:class="{disabled: disableCharacter(character.id)}"
         :key="character.id"
         @click="selectCharacter(character)">
         <img :src="character.url" :alt="character.name"/>
@@ -58,7 +58,7 @@ export default {
   methods: {
     ...mapMutations(['updatePlayerCharacter', 'setDraftPicks', 'addPlayerCharacter']),
     selectCharacter(character) {
-      if (!(this.disableCharacter(character.id) || this.chosenCharacter(character.id))) {
+      if (!(this.disableCharacter(character.id))) {
         if (this.special_draft) {
           this.addPlayerCharacter({ id: this.current_player_id, index: this.current_counter, pick: character.id });
           this.drafted_characters.push(character.id);
@@ -92,9 +92,7 @@ export default {
       }
       return this.disabled_characters.find((id) => id === character);
     },
-    chosenCharacter(character) {
-      return this.drafted_characters.find((id) => id === character);
-    },
+
     selectRandomCharacter() {
       const available = this.characters.filter((character) => {
         const drafted = this.drafted_characters.find((id) => id === character.id);

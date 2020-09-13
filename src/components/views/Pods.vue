@@ -35,23 +35,23 @@
       </div>
       <div class="col">
         <div class="row my-3">
-          <div class="col"><Pod title="TOP" :pool="top" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
-          <div class="col"><Pod title="BOTTOM" :pool="bottom" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
-          <div class="col"><Pod title="MIDDLE" :pool="middle" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
-          <div class="col"><Pod title="EDGES" :pool="edges" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
-          <div class="col"><Pod title="WAIFUS" :pool="waifus" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Doms" :pool="doms" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Subs" :pool="subs" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Rods" :pool="rods" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Tacos" :pool="tacos" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Waifus" :pool="waifus" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
         </div>
         <div class="row">
-          <div class="col"><Pod title="1010"
-            :pool="checkerTop" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
-          <div class="col"><Pod title="0101"
-            :pool="checkerBottom" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
-          <div class="col"><Pod title="PINEAPPLE"
-            :pool="pineapple" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
-          <div class="col"><Pod title="ASSMILK"
-            :pool="assmilk" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
-          <div class="col"><Pod title="HUSBANDOS"
+          <div class="col"><Pod title="Husbandos"
             :pool="husbandos" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Zeke's Team"
+            :pool="zekesteam" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Russ's Team"
+            :pool="russsteam" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Zoomers"
+            :pool="zoomers" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
+          <div class="col"><Pod title="Boomers"
+            :pool="boomers" @locked="lockedPods += 1" @unlocked="lockedPods--"/></div>
         </div>
       </div>
     </div>
@@ -94,34 +94,34 @@ export default {
         return a.results.podScore < b.results.podScore ? -1 : 1;
       });
     },
-    top() {
+    doms() {
       return this.players.slice(0, 4);
     },
-    bottom() {
+    subs() {
       return this.players.slice(4);
     },
-    middle() {
+    rods() {
       return this.players.filter((player, index) => index > 1 && index < 6);
     },
-    edges() {
+    waifus() {
       return this.players.filter((player, index) => index < 2 || index > 5);
     },
-    checkerTop() {
+    husbandos() {
       return this.players.filter((player, index) => index === 0 || index === 1 || index === 4 || index === 5);
     },
-    checkerBottom() {
+    tacos() {
       return this.players.filter((player, index) => index === 2 || index === 3 || index === 6 || index === 7);
     },
-    pineapple() {
+    zekesteam() {
       return this.players.filter((player, index) => index === 1 || index === 3 || index === 5 || index === 6);
     },
-    assmilk() {
+    russsteam() {
       return this.players.filter((player, index) => index === 0 || index === 3 || index === 4 || index === 7);
     },
-    waifus() {
+    zoomers() {
       return this.players.filter((player, index) => index === 1 || index === 2 || index === 4 || index === 7);
     },
-    husbandos() {
+    boomers() {
       return this.players.filter((player, index) => index === 0 || index === 2 || index === 5 || index === 6);
     },
   },

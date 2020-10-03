@@ -16,7 +16,7 @@ const allPlayers = [
   },
   {
     id: 4,
-    name: 'Phil',
+    name: 'Sean',
     disabled: [],
   },
   {
@@ -26,12 +26,12 @@ const allPlayers = [
   },
   {
     id: 6,
-    name: 'Hunter',
+    name: 'Brandon',
     disabled: [],
   },
   {
     id: 7,
-    name: 'Sam',
+    name: 'John',
     disabled: [],
   },
   {
@@ -41,12 +41,12 @@ const allPlayers = [
   },
   {
     id: 9,
-    name: 'John',
+    name: 'Player00',
     disabled: [],
   },
   {
     id: 10,
-    name: 'Heather',
+    name: 'Player01',
     disabled: [],
   },
 ];

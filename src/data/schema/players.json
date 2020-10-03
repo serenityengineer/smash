@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "name": "Phil",
+      "name": "Sean",
       "active": true,
       "played_characters": [],
       "disabled_characters": [],
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "name": "Hunter",
+      "name": "Brandon",
       "active": true,
       "played_characters": [],
       "disabled_characters": [],
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "name": "Sam",
+      "name": "John",
       "active": true,
       "played_characters": [],
       "disabled_characters": [],
@@ -66,7 +66,7 @@
     },
     {
       "id": 9,
-      "name": "John",
+      "name": "Player00",
       "active": true,
       "played_characters": [],
       "disabled_characters": [],
@@ -74,7 +74,7 @@
     },
     {
       "id": 10,
-      "name": "Heather",
+      "name": "Player01",
       "active": true,
       "played_characters": [],
       "disabled_characters": [],

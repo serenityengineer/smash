@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       draft: 'normal',
-      format: 'local',
+      format: 'online',
     };
   },
   computed: {
